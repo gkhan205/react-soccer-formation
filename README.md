@@ -10,3 +10,5 @@ npm i -S react-soccer-formation
 
 import Formation from 'react-soccer-formation' 
 ````     
+
+Demo: https://gkhan205.github.io/react-soccer-formation/
