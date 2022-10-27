@@ -1,7 +1,7 @@
 // @ts-ignore
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Formation, Props } from '../src/Formation';
+import Formation, { Props } from '../src';
 
 const meta: Meta = {
   title: 'Formation',
@@ -27,10 +27,27 @@ const meta: Meta = {
         '5-2-1-2',
       ],
       control: { type: 'select' },
+      defaultValue: '4-2-1-3',
+      description: 'Formation string with hyphen separated',
     },
   },
   parameters: {
     controls: { expanded: true },
+    info: {
+      text: `
+        install form NPM/Yarn 
+        
+        ~~~js
+        yarn add react-soccer-formation
+        npm i -S react-soccer-formation
+        ~~~
+        
+        
+        ~~~js
+        import Formation from 'react-soccer-formation' 
+        ~~~
+      `,
+    },
   },
 };
 
@@ -38,8 +55,8 @@ export default meta;
 
 const Template: Story<Props> = (args) => <Formation {...args} />;
 
-// By passing using the Args format for exported stories, you can control the props for a component for reuse in a test
-// https://storybook.js.org/docs/react/workflows/unit-testing
 export const Default = Template.bind({});
 
-Default.args = {};
+Default.args = {
+  formation: '4-2-3-1',
+};

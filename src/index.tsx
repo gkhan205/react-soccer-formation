@@ -1,15 +1,46 @@
-import React, { FC, HTMLAttributes, ReactChild } from 'react';
+import React, { useMemo } from 'react';
 
-export interface Props extends HTMLAttributes<HTMLDivElement> {
-  /** custom content, defaults to 'the snozzberries taste like snozzberries' */
-  children?: ReactChild;
+require('./styles.css');
+
+const pitch = require('./img/pitch.svg');
+
+export interface Props {
+  formation: string;
 }
 
-// Please do not use types off of a default export module or else Storybook Docs will suffer.
-// see: https://github.com/storybookjs/storybook/issues/9556
-/**
- * A custom Thing component. Neat!
- */
-export const Thing: FC<Props> = ({ children }) => {
-  return <div>{children || `the snozzberries taste like snozzberries`}</div>;
+const createPlayers = (numberOfPlayers: number = 0) => {
+  const elems = [];
+
+  for (let i = 0; i < numberOfPlayers; i++) {
+    elems.push(<div key={numberOfPlayers + i} className="player" />);
+  }
+
+  return elems;
 };
+
+const Formation = ({ formation = '4-1-2-3' }: Props) => {
+  const form = useMemo(() => {
+    return formation.split('-');
+  }, [formation]);
+
+  return (
+    <>
+      <div className="formation-container">
+        <img src={pitch} alt="" />
+        <div className="field-container">
+          <div className="player-container">
+            <div className="player" />
+          </div>
+
+          {form.map((item) => (
+            <div className="player-container">
+              {createPlayers(parseInt(item))}
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Formation;

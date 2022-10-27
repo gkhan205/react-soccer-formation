@@ -37,7 +37,6 @@
     width: 100%;
     align-items: center;
     justify-content: space-around;
-
 }
 
 .player {
@@ -49,3 +48,28 @@
     color: var(--player-box-text-color);
 }
 
+@media (max-width: 768px) {
+    .field-container {
+        height: 400px;
+    }
+
+    .player {
+        --player-dot-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .field-container {
+        height: 280px;
+    }
+
+    .player {
+        --player-dot-size: 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    .field-container {
+        height: 220px;
+    }
+}
