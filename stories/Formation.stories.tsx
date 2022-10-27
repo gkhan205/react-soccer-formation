@@ -24,7 +24,6 @@ const meta: Meta = {
         '5-4-1',
         '3-1-4-2',
         '5-3-2',
-        '5-2-1-2',
       ],
       control: { type: 'select' },
       defaultValue: '4-2-1-3',
