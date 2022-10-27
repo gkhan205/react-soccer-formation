@@ -38,7 +38,6 @@
   "name": "react-soccer-formation",
   "author": {
     "name": "Ghazi Khan",
-    "email": "ghazikhan205@gmail.com",
     "github": "www.github.com/gkhan205"
   },
   "module": "dist/soccer-formation.esm.js",
