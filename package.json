@@ -19,7 +19,7 @@
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -o ./docs"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -36,7 +36,11 @@
     "trailingComma": "es5"
   },
   "name": "react-soccer-formation",
-  "author": "Ghazi Khan",
+  "author": {
+    "name": "Ghazi Khan",
+    "email": "ghazikhan205@gmail.com",
+    "github": "www.github.com/gkhan205"
+  },
   "module": "dist/soccer-formation.esm.js",
   "size-limit": [
     {
