@@ -2,6 +2,9 @@
 
 Display soccer formation with ease in ReactJS
 
+[![docs](https://github.com/gkhan205/react-soccer-formation/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main)](https://github.com/gkhan205/react-soccer-formation/actions/workflows/pages/pages-build-deployment)
+
+
 ````
 install form NPM/Yarn
 
