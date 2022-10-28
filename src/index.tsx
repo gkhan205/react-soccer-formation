@@ -1,6 +1,12 @@
 import React, { useMemo } from 'react';
-
-require('./styles.css');
+import {
+  AppCssContainer,
+  FieldContainer,
+  FormationContainer,
+  PitchImage,
+  Player,
+  PlayerContainer,
+} from './styles';
 
 const pitch = require('./img/pitch.svg');
 
@@ -12,7 +18,7 @@ const createPlayers = (numberOfPlayers: number = 0) => {
   const elems = [];
 
   for (let i = 0; i < numberOfPlayers; i++) {
-    elems.push(<div key={numberOfPlayers + i} className="player" />);
+    elems.push(<Player key={numberOfPlayers + i} />);
   }
 
   return elems;
@@ -24,22 +30,20 @@ const Formation = ({ formation = '4-1-2-3' }: Props) => {
   }, [formation]);
 
   return (
-    <>
-      <div className="formation-container">
-        <img src={pitch} alt="" />
-        <div className="field-container">
-          <div className="player-container">
-            <div className="player" />
-          </div>
+    <AppCssContainer>
+      <FormationContainer>
+        <PitchImage src={pitch} alt="" />
+        <FieldContainer>
+          <PlayerContainer>
+            <Player />
+          </PlayerContainer>
 
           {form.map((item) => (
-            <div className="player-container">
-              {createPlayers(parseInt(item))}
-            </div>
+            <PlayerContainer>{createPlayers(parseInt(item))}</PlayerContainer>
           ))}
-        </div>
-      </div>
-    </>
+        </FieldContainer>
+      </FormationContainer>
+    </AppCssContainer>
   );
 };
 
