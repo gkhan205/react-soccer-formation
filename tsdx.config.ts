@@ -1,6 +1,7 @@
 const postcss = require('rollup-plugin-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+const static_files = require('rollup-plugin-static-files');
 
 module.exports = {
   rollup(config, options) {
@@ -11,6 +12,7 @@ module.exports = {
         extract: true,
       })
     );
+
     return config;
   },
 };

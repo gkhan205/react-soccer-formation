@@ -8,7 +8,8 @@ import {
   PlayerContainer,
 } from './styles';
 
-const pitch = require('./img/pitch.svg');
+const pitch =
+  'https://res.cloudinary.com/dvivtol4t/image/upload/v1666955101/pitch_okhpmb.svg';
 
 export interface Props {
   formation: string;
