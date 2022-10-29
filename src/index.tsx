@@ -21,7 +21,6 @@ const createPlayers = (numberOfPlayers: number = 0) => {
   for (let i = 0; i < numberOfPlayers; i++) {
     elems.push(<Player key={numberOfPlayers + i} />);
   }
-
   return elems;
 };
 
