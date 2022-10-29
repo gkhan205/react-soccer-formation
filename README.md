@@ -17,4 +17,4 @@ import Formation, { allFormations } from 'react-soccer-formation';
 
 **Note: Please use this allFormations array for dropdown as this is tightly coupled with the library**
 
-Demo: https://gkhan205.github.io/react-soccer-formation/
+Demo: https://hkrcf.netlify.app/
