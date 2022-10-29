@@ -41,7 +41,13 @@ const Formation = ({
   return (
     <AppCssContainer>
       <FormationContainer>
-        <PitchImage src={pitch} alt="" id="pitch-image" ref={imageRef} />
+        <PitchImage
+          onLoad={getImageHeight}
+          src={pitch}
+          alt=""
+          id="pitch-image"
+          ref={imageRef}
+        />
 
         <FieldContainer height={dimension.height}>
           <TeamContainer
