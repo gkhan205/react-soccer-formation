@@ -19,7 +19,8 @@
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o ./docs"
+    "build-storybook": "build-storybook -o ./docs",
+    "start:demo": "cd example && yarn run dev"
   },
   "peerDependencies": {
     "react": ">=16"

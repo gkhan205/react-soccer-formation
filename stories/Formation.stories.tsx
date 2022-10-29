@@ -1,32 +1,17 @@
 // @ts-ignore
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import Formation, { Props } from '../src';
+import Formation, { allFormations } from '../src';
+import { FormationProps as Props } from '../src/types';
 
 const meta: Meta = {
   title: 'Formation',
   component: Formation,
   argTypes: {
     formation: {
-      options: [
-        '4-3-3',
-        '4-5-1',
-        '4-1-4-1',
-        '4-4-2',
-        '4-2-3-1',
-        '4-4-1-1',
-        '4-1-2-1-2',
-        '4-2-2-2',
-        '4-3-1-2',
-        '4-3-3',
-        '5-4-1',
-        '4-2-4',
-        '5-4-1',
-        '3-1-4-2',
-        '5-3-2',
-      ],
+      options: allFormations,
       control: { type: 'select' },
-      defaultValue: '4-2-1-3',
+      defaultValue: allFormations[0],
       description: 'Formation string with hyphen separated',
     },
   },
@@ -43,8 +28,10 @@ const meta: Meta = {
         
         
         ~~~js
-        import Formation from 'react-soccer-formation' 
+        import Formation, { allFormations } from 'react-soccer-formation';
         ~~~
+        
+        Please use this allFormations array for dropdown as this is tightly coupled with the library
       `,
     },
   },
@@ -57,5 +44,6 @@ const Template: Story<Props> = (args) => <Formation {...args} />;
 export const Default = Template.bind({});
 
 Default.args = {
-  formation: '4-2-3-1',
+  formation: allFormations[0],
+  onPositionSelection(position: string): any {},
 };

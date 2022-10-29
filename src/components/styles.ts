@@ -8,6 +8,7 @@ export const AppCssContainer = styled.div`
   --player-box-bg-color: #edae34;
   --player-box-bodrer-color: #0d1757;
   --player-box-text-color: #0d1757;
+  --position-name-color: #ffffff;
 `;
 
 export const FormationContainer = styled.div`
@@ -26,41 +27,53 @@ export const PitchImage = styled.img`
 `;
 
 export const FieldContainer = styled.div`
-  width: 100%;
-  height: calc(var(--main-height) - 100px);
-  display: grid;
-  grid-template-rows: repeat(5, 1fr);
-  position: absolute;
+  --height: ${(props: { height: number }) => props.height}px;
+  --rows: ${(props: { rows: any }) => props.rows};
 
-  @media (max-width: 768px) {
-    height: 400px;
-  }
+  width: 100%;
+  height: calc(var(--height) - 15%);
+  display: grid;
+  grid-template-rows: repeat(var(--rows), 1fr);
+  position: absolute;
+  margin-top: 10%;
 
   @media (max-width: 480px) {
-    height: 280px;
-  }
-
-  @media (max-width: 320px) {
-    height: 220px;
+    margin-top: 0;
   }
 `;
 
 export const PlayerContainer = styled.div`
+  width: ${(props: { width: any }) => props.width}px;
   display: flex;
-  width: 100%;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 `;
 
 export const Player = styled.div`
+  font-size: 12px;
+  text-align: center;
+`;
+
+export const PlayerDot = styled.div`
   width: var(--player-dot-size);
   height: var(--player-dot-size);
   border-radius: 50%;
   background: var(--player-box-bg-color);
   border: solid 1px var(--player-box-bodrer-color);
   color: var(--player-box-text-color);
+  cursor: pointer;
 
   @media (max-width: 768px) {
     --player-dot-size: 15px;
+  }
+`;
+
+export const PositionName = styled.p`
+  font-weight: bold;
+  color: var(--position-name-color);
+  margin: 0;
+
+  @media (max-width: 480px) {
+    font-size: 10px;
   }
 `;
