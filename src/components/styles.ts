@@ -13,7 +13,7 @@ export const AppCssContainer = styled.div`
 
 export const FormationContainer = styled.div`
   width: 100%;
-  height: var(--main-height);
+  //height: var(--main-height);
   display: flex;
   align-items: center;
   position: relative;
