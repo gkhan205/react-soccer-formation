@@ -15,9 +15,9 @@ export const formationsWithPositions: any = {
   },
   '4-1-4-1': {
     df: ['LB', 'LCB', 'RCB', 'RB'],
-    cdm: ['LDM', 'RDM'],
+    cdm: ['CDM'],
     cm: [],
-    cam: ['LAM', 'CAM', 'RAM'],
+    cam: ['LAM', 'CAM', 'CAM', 'RAM'],
     fw: ['ST'],
   },
   '4-4-2(Flat)': {
